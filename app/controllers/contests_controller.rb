@@ -42,7 +42,7 @@ class ContestsController < ApplicationController
     end
     
     def pigeon_params
-    	params.require(:pigeon).permit(:code, :lat, :long)
+    	params.require(:pigeon).permit(:code, :latitude, :longitude)
     end
     
 end

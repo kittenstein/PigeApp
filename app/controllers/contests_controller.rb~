@@ -22,11 +22,12 @@ class ContestsController < ApplicationController
 		$idshow = params[:id]
 		@contest = Contest.find(params[:id])
 		@pigeons = @contest.pigeons
+		redirect_to "/show_contests/" + @contest.id.to_s
 	end
 	
 	def create_pigeon
 		@contest = Contest.find($idshow)
-		@pigeon = @contest.build(pigeon_params)
+		@pigeon = @contest.pigeons.build(pigeon_params)
   	if @pigeon.save
 			flash[:success] = "Pigeon created!"
     	redirect_to "/show_contests/" + @contest.id.to_s
