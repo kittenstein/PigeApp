@@ -1,1 +1,11 @@
+<%= form_for(:contest, url: new_contest_path) do |f| %>
+  <div>
+  	<%= f.label :name %>
+  	<%= f.text_field :name %>
+  	<%= f.label :latitude %>
+  </div>
+  <%= f.submit "Post"%>
+<% end %>
+
 <%= render @contests %>
+

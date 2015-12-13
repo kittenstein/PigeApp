@@ -12,6 +12,8 @@ get    'show_events'    => "events#show"
 post   'new_event'      => "events#create"
 
 get    'show_contests'  => "contests#show"
+post   'new_contest'    => "contests#create"
+get    'show_contests/:id' => "contests#edit"
 
 resources :users
 end

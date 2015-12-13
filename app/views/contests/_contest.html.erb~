@@ -1,3 +1,6 @@
-<%= @contest.name %>
-<%= @contest.lat %>
-<%= @contest.long %>
+<div>
+<%= link_to contest.name, "/show_contests/" + contest.id %>
+<%= contest.lat %>
+<%= contest.long %>
+<%= User.find(contest.user_id).name %>
+</div>

@@ -9,7 +9,7 @@ class ContestsController < ApplicationController
 	end
 	
 	def create
-  	@contest = current_user.events.build(event_params)
+  	@contest = current_user.contests.build(contest_params)
   	if @contest.save
 			flash[:success] = "Contest created!"
     	redirect_to show_contests_path
@@ -18,9 +18,13 @@ class ContestsController < ApplicationController
   	end
 	end
 	
+	def edit
+		@contest = Contest.find(params[:id])
+	end
+	
 	private
 
-    def event_params
+    def contest_params
       params.require(:contest).permit(:name, :lat, :long)
     end
     
