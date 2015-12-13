@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212100358) do
+ActiveRecord::Schema.define(version: 20151213084300) do
+
+  create_table "contests", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.decimal  "lat"
+    t.decimal  "long"
+  end
+
+  add_index "contests", ["user_id"], name: "index_contests_on_user_id"
 
   create_table "events", force: :cascade do |t|
     t.string   "header"
@@ -22,6 +33,17 @@ ActiveRecord::Schema.define(version: 20151212100358) do
   end
 
   add_index "events", ["user_id"], name: "index_events_on_user_id"
+
+  create_table "pigeons", force: :cascade do |t|
+    t.string   "code"
+    t.integer  "contest_id"
+    t.decimal  "lat"
+    t.decimal  "long"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "pigeons", ["contest_id"], name: "index_pigeons_on_contest_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
