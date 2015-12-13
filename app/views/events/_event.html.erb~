@@ -1,0 +1,3 @@
+<h1><%= event.header %></h1>
+<div><%= event.content %></div>
+<div><%= event.user_id %></div>

@@ -1,0 +1,11 @@
+<%= form_for(:event, url) do |f| %>
+  <div>
+  	<%= f.label :header %>
+  	<%= f.text_field :header %>
+  	<%= f.label :content %>
+    <%= f.text_area :content, placeholder: "Compose new event..." %>
+  </div>
+  <%= f.submit "Post"%>
+<% end %>
+
+<%= render @events %>
