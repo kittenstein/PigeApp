@@ -1,2 +1,9 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "Home") %>
+<h1>Home</h1>
+<p>
+Pigeon racing is the sport of releasing specially trained racing pigeons, which then return to their homes over a carefully measured distance. The time it takes the animal to cover the specified distance is measured and the bird's rate of travel is calculated and compared with all of the other pigeons in the race to determine which animal returned at the highest speed. More about it right <a href="https://en.wikipedia.org/wiki/Pigeon_racing"> <i>here</i></a>
+</p>
+
+<p>
+<img src="http://i.imgur.com/37sZdI0.jpg" style="width:500px;height:500px;">
+</p>
