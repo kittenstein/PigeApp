@@ -1,18 +1,78 @@
-<header>
-  <div>
-    <nav>
-      <ul>
+<style>
+  #header {
+      background-color:black;
+      color:white;
+      text-align:center;
+      padding:5px;
+  }
+  a {
+    color: #b32d00;
+  }
+  #nav {
+      line-height:30px;
+      background-color:#eeeeee;
+      height:300px;
+      width:100px;
+      float:left;
+      padding:5px; 
+      font-family: helvetica;
+  }
+  #section {
+      width:350px;
+      float:left;
+      padding:10px; 
+      font-family: helvetica;
+  }
+  </style>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+  <script>
+    var myCenter=new google.maps.LatLng(44.4238761,26.1218915);
+    var map;
+    function initialize()
+    {
+      var mapProp = {
+        center:myCenter,
+        zoom:1,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+
+      map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    function addPigeon(lat, longit) {
+      var marker=new google.maps.Marker({
+        position:new google.maps.LatLng(lat,longit),
+        });
+      marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    function functie() {
+      a = <%= Pigeon.all.map{|m| m.attributes}.
+     to_json.gsub("</script", "<\"+\"/script").html_safe %>;
+     console.log(a[3].latitude);
+
+      addPigeon(a[3].latitude, a[3].longitude);
+      //addPigeon(5.22, 1.33);
+    //google.maps.event.addDomListener(window, 'load', initialize);
+    google.maps.event.addDomListener(window, 'load', addPigeon);
+    
+  }
+  </script>
+<div id="header">
+<h1>PIGEAPP</h1>
+</div>
+<div id="nav">
+    <ul>
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Help", help_path %></li>
         <% if logged_in? %>
           <li><%= link_to "News", show_events_path %></li>
           <li><%= link_to "Profile", current_user %></li>
           <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+          <li><%= link_to "Contests", show_contests_path %></li>
         <% else %>
           <li><%= link_to "Log in", login_path %></li>
           <li><%= link_to "Sign up", new_user_path %></li>
         <% end %>
       </ul>
-    </nav>
-  </div>
-</header>
+</div>

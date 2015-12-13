@@ -6,7 +6,7 @@ get    'contact'        => "static_pages#contact"
 
 get    'login'          => "sessions#new"
 post   'login'          => "sessions#create"
-delete 'logout'         => "sessions#destroy"
+get 'logout'         => "sessions#destroy"
 
 get    'show_events'    => "events#show"
 post   'new_event'      => "events#create"

@@ -68,7 +68,7 @@
         <% if logged_in? %>
           <li><%= link_to "News", show_events_path %></li>
           <li><%= link_to "Profile", current_user %></li>
-          <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+          <li><%= link_to "Log out", logout_path %></li>
           <li><%= link_to "Contests", show_contests_path %></li>
         <% else %>
           <li><%= link_to "Log in", login_path %></li>
