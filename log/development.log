@@ -7478,3 +7478,1916 @@ Processing by ContestsController#show as HTML
   Rendered layouts/_header.html.erb (0.8ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 87ms (Views: 36.7ms | ActiveRecord: 0.6ms)
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT  "contests".* FROM "contests"  ORDER BY "contests"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pigeons" ("code", "lat", "long", "contest_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["code", "asd132"], ["lat", 123.2], ["long", 21.2], ["contest_id", 1], ["created_at", "2015-12-13 11:14:31.639109"], ["updated_at", "2015-12-13 11:14:31.639109"]]
+  [1m[35m (43.2ms)[0m  commit transaction
+
+
+Started GET "/show_contests" for 127.0.0.1 at 2015-12-13 13:14:49 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContestsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contests/_contest.html.erb (9.5ms)
+  Rendered contests/show.html.erb within layouts/application (35.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 535ms (Views: 431.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:14:50 +0200
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:14:51 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.1ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  Rendered contests/edit.html.erb within layouts/application (19.8ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (Missing partial pigeons/_pigeon with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/robert/PigeApp/app/views"
+):
+    2: <%= @contest.name %>
+    3: </h1>
+    4: 
+    5: <%= render @pigeons %>
+  app/views/contests/edit.html.erb:5:in `_app_views_contests_edit_html_erb__2119080401753328884_70183557365420'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.0ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:14:52 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.1ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  Rendered contests/edit.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Missing partial pigeons/_pigeon with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/robert/PigeApp/app/views"
+):
+    2: <%= @contest.name %>
+    3: </h1>
+    4: 
+    5: <%= render @pigeons %>
+  app/views/contests/edit.html.erb:5:in `_app_views_contests_edit_html_erb__2119080401753328884_70183361402060'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (22.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (39.4ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:16:06 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.1ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  Rendered pigeons/_pigeon.html.erb (2.3ms)
+  Rendered contests/edit.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for #<Pigeon:0x007fa9acc3ca78>):
+    1: <div>
+    2: <%= pigeon.name %>
+    3: <%= pigeon.lat %>
+    4: <%= pigeon.long %>
+    5: <%= Contest.find(pigeon.contest_id).name %>
+  app/views/pigeons/_pigeon.html.erb:2:in `_app_views_pigeons__pigeon_html_erb___1753356119479813815_70183362337420'
+  app/views/contests/edit.html.erb:5:in `_app_views_contests_edit_html_erb__2119080401753328884_70183361402060'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (21.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.9ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.1ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.9ms)
+  Rendered contests/edit.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 71.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:16:19 +0200
+
+
+Started GET "/show_contests" for 127.0.0.1 at 2015-12-13 13:17:01 +0200
+Processing by ContestsController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contests/_contest.html.erb (2.0ms)
+  Rendered contests/show.html.erb within layouts/application (4.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 50.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/show_contests" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+Processing by ContestsController#show as HTML
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mContest Load (0.4ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mContest Load (0.2ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contests/_contest.html.erb (4.9ms)
+  Rendered contests/show.html.erb within layouts/application (7.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 81.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:46 +0200
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:20:48 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.1ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.0ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.7ms)
+  Rendered contests/edit.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.3ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.5ms)
+  Rendered contests/edit.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 96ms (Views: 94.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:20:49 +0200
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:21:01 +0200
+
+AbstractController::ActionNotFound (The action 'create_pigeon' could not be found for ContestsController):
+  actionpack (4.2.4) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/robert/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/robert/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/robert/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (64.2ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:21:34 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kv7S3EtzVTWWJazUN55uok1LINtw0m6j6Hi5nph2tSQLHnK6EbStbBRNAszW+bA5GbBG+vFdAVr6jU9vDwt1MQ==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `build' for nil:NilClass):
+  app/controllers/contests_controller.rb:27:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (47.8ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:22:16 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kv7S3EtzVTWWJazUN55uok1LINtw0m6j6Hi5nph2tSQLHnK6EbStbBRNAszW+bA5GbBG+vFdAVr6jU9vDwt1MQ==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[35mContest Load (0.2ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 18ms (ActiveRecord: 0.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:27:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (16.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (58.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-13 13:22:36 +0200
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (18.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/show_contests" for 127.0.0.1 at 2015-12-13 13:22:38 +0200
+Processing by ContestsController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mContest Load (0.2ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contests/_contest.html.erb (6.3ms)
+  Rendered contests/show.html.erb within layouts/application (12.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 99.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:22:39 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.2ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.0ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.5ms)
+  Rendered contests/edit.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-12-13 13:22:48 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qVKzK7+qUBpE4W4oaRwbOFcQ5U2/uK2J2bsIM8zGy5AwshNN5W2oQ8aJwDCIe8WjA+uDbD43wnDLTv7CW7sLhQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-13 13:22:48 +0200
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 113ms (Views: 111.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:22:51 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qVKzK7+qUBpE4W4oaRwbOFcQ5U2/uK2J2bsIM8zGy5AwshNN5W2oQ8aJwDCIe8WjA+uDbD43wnDLTv7CW7sLhQ==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:27:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.9ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:23:31 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qVKzK7+qUBpE4W4oaRwbOFcQ5U2/uK2J2bsIM8zGy5AwshNN5W2oQ8aJwDCIe8WjA+uDbD43wnDLTv7CW7sLhQ==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 9ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:26:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (51.5ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:23:34 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qVKzK7+qUBpE4W4oaRwbOFcQ5U2/uK2J2bsIM8zGy5AwshNN5W2oQ8aJwDCIe8WjA+uDbD43wnDLTv7CW7sLhQ==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:26:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (48.6ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:23:48 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qVKzK7+qUBpE4W4oaRwbOFcQ5U2/uK2J2bsIM8zGy5AwshNN5W2oQ8aJwDCIe8WjA+uDbD43wnDLTv7CW7sLhQ==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[35mContest Load (1.2ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 19ms (ActiveRecord: 1.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:26:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (3.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (48.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-13 13:23:52 +0200
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (10.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 112ms (Views: 110.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-12-13 13:23:55 +0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-12-13 13:23:56 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WjR0ckHw+N7M+Fx6y6xyrKIpSTbAyD51f5/MOeGa5KzD1NQUGzcAh06Q8mIqy6w39tIvF0FHUYxtajrIduckuQ==", "session"=>{"email"=>"robert@dumitru.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "robert@dumitru.com"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 83ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-12-13 13:23:56 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 84ms (Views: 82.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/show_contests" for 127.0.0.1 at 2015-12-13 13:23:58 +0200
+Processing by ContestsController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contests/_contest.html.erb (1.6ms)
+  Rendered contests/show.html.erb within layouts/application (10.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 102.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:23:59 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pigeons' for nil:NilClass):
+  app/controllers/contests_controller.rb:22:in `edit'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (10.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (20.8ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:23:59 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `pigeons' for nil:NilClass):
+  app/controllers/contests_controller.rb:22:in `edit'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (26.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (47.3ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:24:44 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.3ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.3ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.5ms)
+  Rendered contests/edit.html.erb within layouts/application (13.9ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (18.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 160ms (Views: 110.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:24:45 +0200
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:24:50 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4jVsldtHGM7Vd942uaNt7n6vz0dc4bPHfdj8gHd2RcR71czzgYDgl1cfcC5YxLN1KlSpZt1u3D5vLQpx4AuF0Q==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `build' for nil:NilClass):
+  app/controllers/contests_controller.rb:27:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (3.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (57.2ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:26:29 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4jVsldtHGM7Vd942uaNt7n6vz0dc4bPHfdj8gHd2RcR71czzgYDgl1cfcC5YxLN1KlSpZt1u3D5vLQpx4AuF0Q==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:29:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (45.7ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:27:27 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4jVsldtHGM7Vd942uaNt7n6vz0dc4bPHfdj8gHd2RcR71czzgYDgl1cfcC5YxLN1KlSpZt1u3D5vLQpx4AuF0Q==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 15ms (ActiveRecord: 1.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:29:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (25.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (45.0ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.2ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (1.0ms)
+  Rendered contests/edit.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (14.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 104ms (Views: 96.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:28:21 +0200
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.6ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.3ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (1.2ms)
+  Rendered contests/edit.html.erb within layouts/application (20.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (16.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 152ms (Views: 130.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:38:41 +0200
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:38:48 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9sCe6syWGh02GiYfKzdID+GMxaYSKCoFHLIFehIobsxvID6MllHiRLRyiAfKUJaUtXejh5OnRfwOR/OLhVWu2Q==", "pigeon"=>{"code"=>"fds", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:29:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (42.9ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:39:36 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9sCe6syWGh02GiYfKzdID+GMxaYSKCoFHLIFehIobsxvID6MllHiRLRyiAfKUJaUtXejh5OnRfwOR/OLhVWu2Q==", "pigeon"=>{"code"=>"fds", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 13ms (ActiveRecord: 3.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:30:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.3ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:41:25 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9sCe6syWGh02GiYfKzdID+GMxaYSKCoFHLIFehIobsxvID6MllHiRLRyiAfKUJaUtXejh5OnRfwOR/OLhVWu2Q==", "pigeon"=>{"code"=>"fds", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[35mContest Load (0.3ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 15ms (ActiveRecord: 1.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:28:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (42.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-13 13:43:07 +0200
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (14.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 89.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/show_contests" for 127.0.0.1 at 2015-12-13 13:43:09 +0200
+Processing by ContestsController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contests/_contest.html.erb (1.0ms)
+  Rendered contests/show.html.erb within layouts/application (2.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 53.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:43:10 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.1ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.0ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.4ms)
+  Rendered contests/edit.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (wrong number of arguments (0 for 1)):
+    16: 
+    17: <%= render @pigeons %>
+    18: 
+    19: <%= debug %>
+  app/views/contests/edit.html.erb:19:in `_app_views_contests_edit_html_erb__2119080401753328884_70183562821820'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (26.9ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:43:10 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPigeon Load (0.1ms)[0m  SELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?  [["contest_id", 1]]
+  [1m[36mContest Load (0.3ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (1.6ms)
+  Rendered contests/edit.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (wrong number of arguments (0 for 1)):
+    16: 
+    17: <%= render @pigeons %>
+    18: 
+    19: <%= debug %>
+  app/views/contests/edit.html.erb:19:in `_app_views_contests_edit_html_erb__2119080401753328884_70183361079440'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.6ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.1ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.6ms)
+  Rendered contests/edit.html.erb within layouts/application (10.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 82.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:43:24 +0200
+
+
+Started GET "/show_contests" for 127.0.0.1 at 2015-12-13 13:43:27 +0200
+Processing by ContestsController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mContest Load (0.4ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mContest Load (0.7ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contests/_contest.html.erb (1.1ms)
+  Rendered contests/show.html.erb within layouts/application (5.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 133.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:43:29 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.1ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.4ms)
+  Rendered contests/edit.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:43:40 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OtrW3eFl1j9k2AslzAQvVggFppCQQ9rrrPDjXej7hpWjOna7u6IuZuawpT0tY/HNXP7AsRHMtRK+BRWsf4ZGgA==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:28:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (46.5ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:44:06 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPigeon Load (0.2ms)[0m  SELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?  [["contest_id", 1]]
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.5ms)
+  Rendered contests/edit.html.erb within layouts/application (36.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 107.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:44:07 +0200
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:44:24 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KzvxSKtkCZ1EDJtvTe7OZftYqHTXJQ5zAovNaviU3x6y21Eu8aPxxMZkNXesiRD+r6POVVaqYYoQfjubb+kfCw==", "pigeon"=>{"code"=>"", "lat"=>"", "long"=>""}, "commit"=>"Post"}
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Contest with 'id'=):
+  app/controllers/contests_controller.rb:28:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.8ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (44.2ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.1ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.0ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.4ms)
+  Rendered contests/edit.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (5.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 89ms (Views: 87.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:17 +0200
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.1ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.5ms)
+  Rendered contests/edit.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 98.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:19 +0200
+
+
+Started GET "/show_contests" for 127.0.0.1 at 2015-12-13 13:46:28 +0200
+Processing by ContestsController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mContest Load (0.0ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?  [["user_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contests/_contest.html.erb (1.3ms)
+  Rendered contests/show.html.erb within layouts/application (3.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 69.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/show_contests/2" for 127.0.0.1 at 2015-12-13 13:46:30 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPigeon Load (0.0ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 2]]
+  Rendered collection (0.0ms)
+  Rendered contests/edit.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:46:32 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPigeon Load (0.1ms)[0m  SELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?  [["contest_id", 1]]
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.4ms)
+  Rendered contests/edit.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPigeon Load (0.5ms)[0m  SELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?  [["contest_id", 1]]
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (1.2ms)
+  Rendered contests/edit.html.erb within layouts/application (16.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (27.4ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 215ms (Views: 194.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:48 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:49 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:49 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:49 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:49 +0200
+
+
+Started GET "/show_contests" for 127.0.0.1 at 2015-12-13 13:46:50 +0200
+Processing by ContestsController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mContest Load (0.2ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?  [["user_id", 1]]
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contests/_contest.html.erb (2.4ms)
+  Rendered contests/show.html.erb within layouts/application (7.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 87.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/show_contests/2" for 127.0.0.1 at 2015-12-13 13:46:52 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPigeon Load (0.1ms)[0m  SELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?  [["contest_id", 2]]
+  Rendered collection (0.0ms)
+  Rendered contests/edit.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 89ms (Views: 86.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:46:54 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.3ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (1.1ms)
+  Rendered contests/edit.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.2ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.7ms)
+  Rendered contests/edit.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (29.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 116.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:46:56 +0200
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:50:23 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContest Load (0.2ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPigeon Load (0.3ms)[0m  [1mSELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?[0m  [["contest_id", 1]]
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (1.9ms)
+  Rendered contests/edit.html.erb within layouts/application (17.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (15.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 123ms (Views: 98.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:50:24 +0200
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:50:35 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"osk7/+beQX2h5DeDb4O1dsbUEWqacBNBaQ01kkx1XOY7KZuZvBm5JCOMmZuO5Gvtki93Sxv/fLh7+MNj2wic8w==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[35mContest Load (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `build' for #<Contest:0x000000036bfca8>):
+  app/controllers/contests_controller.rb:29:in `create_pigeon'
+
+
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.0ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.3ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/robert/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.6ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPigeon Load (0.1ms)[0m  SELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?  [["contest_id", 1]]
+  [1m[36mContest Load (0.2ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (1.5ms)
+  Rendered contests/edit.html.erb within layouts/application (7.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 90ms (Views: 87.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:01 +0200
+
+
+Started GET "/show_contests" for 127.0.0.1 at 2015-12-13 13:51:12 +0200
+Processing by ContestsController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mContest Load (0.2ms)[0m  SELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?  [["user_id", 1]]
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contests/_contest.html.erb (1.3ms)
+  Rendered contests/show.html.erb within layouts/application (2.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:51:13 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.4ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPigeon Load (0.1ms)[0m  SELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?  [["contest_id", 1]]
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.4ms)
+  Rendered contests/edit.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPigeon Load (0.7ms)[0m  SELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?  [["contest_id", 1]]
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (0.6ms)
+  Rendered contests/edit.html.erb within layouts/application (21.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (14.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 120ms (Views: 109.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/contests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/contests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-13 13:51:36 +0200
+
+
+Started POST "/new_pigeon" for 127.0.0.1 at 2015-12-13 13:51:41 +0200
+Processing by ContestsController#create_pigeon as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VJtHB5PuWQ7Hbdc9PbKZ1HUJMrca+ugfS0m4275w46XNe+dhySmhV0UFeSXc1UdPIfJUlpt1h+ZZvE4qKQ0jsA==", "pigeon"=>{"code"=>"321fdsbc", "lat"=>"125.25", "long"=>"21.5"}, "commit"=>"Post"}
+  [1m[36mContest Load (0.1ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pigeons" ("code", "lat", "long", "contest_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["code", "321fdsbc"], ["lat", 125.25], ["long", 21.5], ["contest_id", 1], ["created_at", "2015-12-13 11:51:41.329071"], ["updated_at", "2015-12-13 11:51:41.329071"]]
+  [1m[35m (11.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/show_contests/1
+Completed 302 Found in 18ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/show_contests/1" for 127.0.0.1 at 2015-12-13 13:51:41 +0200
+Processing by ContestsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContest Load (0.4ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPigeon Load (0.4ms)[0m  SELECT "pigeons".* FROM "pigeons" WHERE "pigeons"."contest_id" = ?  [["contest_id", 1]]
+  [1m[36mContest Load (0.3ms)[0m  [1mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "contests".* FROM "contests" WHERE "contests"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered pigeons/_pigeon.html.erb (4.4ms)
+  Rendered contests/edit.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 91.8ms | ActiveRecord: 1.3ms)

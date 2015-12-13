@@ -1,0 +1,6 @@
+<div>
+<%= pigeon.ncode %>
+<%= pigeon.lat %>
+<%= pigeon.long %>
+<%= Contest.find(pigeon.contest_id).name %>
+</div>

@@ -1,3 +1,19 @@
 <h1>
-
+<%= @contest.name %>
 </h1>
+
+<%= form_for(:pigeon, url: new_pigeon_path) do |f| %>
+  <div>
+  	<%= f.label :code %>
+  	<%= f.text_field :code %>
+  	<%= f.label :latitude %>
+  	<%= f.text_field :lat %>
+  	<%= f.label :longitude %>
+  	<%= f.text_field :long %>
+  </div>
+  <%= f.submit "Post"%>
+<% end %>
+
+<%= render @pigeons %>
+
+<%= debug params %>

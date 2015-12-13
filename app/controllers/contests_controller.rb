@@ -1,5 +1,5 @@
 class ContestsController < ApplicationController
-
+	attr_accessor :idshow
 	def show
 		@user = User.all
 		@contests = []
@@ -19,13 +19,30 @@ class ContestsController < ApplicationController
 	end
 	
 	def edit
+		$idshow = params[:id]
 		@contest = Contest.find(params[:id])
+		@pigeons = @contest.pigeons
+	end
+	
+	def create_pigeon
+		@contest = Contest.find($idshow)
+		@pigeon = @contest.pigeons.build(pigeon_params)
+  	if @pigeon.save
+			flash[:success] = "Pigeon created!"
+    	redirect_to "/show_contests/" + @contest.id.to_s
+		else
+    	render 'static_pages/home'
+  	end
 	end
 	
 	private
 
     def contest_params
       params.require(:contest).permit(:name, :lat, :long)
+    end
+    
+    def pigeon_params
+    	params.require(:pigeon).permit(:code, :lat, :long)
     end
     
 end
